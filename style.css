@@ -1,0 +1,42 @@
+.phrase {
+	padding: 10px;
+	width: 100%;
+}
+
+.inputBox {
+	width: 44%;
+}
+
+.traductionBox {
+	width: 44%;
+}
+
+.translateButton {
+	width: 30px;
+	height: 30px;
+	vertical-align: middle; 
+	display: inline-block;
+}
+
+.inputSection {
+	border-style: ridge;
+}
+
+.sectionTitle {
+	padding: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 40px;
+	width: 100%;
+}
+.inputControls {
+	padding-right: 27px;
+	float:right;
+}
+
+
+svg {
+
+  margin: 0 auto; /* poor attempt at centering */
+  display: block;
+  padding-top: 20px;
+}

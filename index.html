@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+        <script src="draw.js"></script> 
+        <script src="backEnd.js"></script> 
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+      <section id = "inputSection" class = "inputSection">
+        <div class = "sectionTitle">Entrada
+          <div class = "inputControls">
+            <input type="image" src="./images/plus.png" class = "translateButton"/ onclick="addLine()">
+            <input type="image" src="./images/minus.png" class = "translateButton"/ onclick="removeLine()">
+          </div>
+        </div>
+        <div class = "phrase">
+          <input type="checkbox" name="cb1_1">
+          <input type="checkbox" name="cb1_2">
+          <input type="text" id="phrase1" class ="inputBox">
+          <input type="image" src="./images/translate.png" class = "translateButton"/>
+          <input type="text" id="traduction1" disabled class ="traductionBox" >
+        </div>
+        <div class = "phrase">
+          <input type="checkbox" name="cb2_1">
+          <input type="checkbox" name="cb2_2">
+          <input type="text" id="phrase2" class ="inputBox">
+          <input type="image" src="./images/translate.png" class = "translateButton"/>
+          <input type="text" id="traduction2" disabled class ="traductionBox">
+        </div>
+      </section>
+      <section id = "dataSection">
+        <div id="dataFrame" class = "dataFrame"><script>drawMatrix(generateDataToPaint(0,0,10),1000,1000,10)</script></div>
+      </section>
+    </body>
+  </html>
