@@ -7,30 +7,37 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-      <section id = "inputSection" class = "inputSection">
-        <div class = "sectionTitle">Entrada
-          <div class = "inputControls">
-            <input type="image" src="./images/plus.png" class = "translateButton"/ onclick="addLine()">
-            <input type="image" src="./images/minus.png" class = "translateButton"/ onclick="removeLine()">
-          </div>
-        </div>
-        <div class = "phrase">
-          <input type="checkbox" name="cb1_1">
-          <input type="checkbox" name="cb1_2">
-          <input type="text" id="phrase1" class ="inputBox">
-          <input type="image" src="./images/translate.png" class = "translateButton"/>
-          <input type="text" id="traduction1" disabled class ="traductionBox" >
-        </div>
-        <div class = "phrase">
-          <input type="checkbox" name="cb2_1">
-          <input type="checkbox" name="cb2_2">
-          <input type="text" id="phrase2" class ="inputBox">
-          <input type="image" src="./images/translate.png" class = "translateButton"/>
-          <input type="text" id="traduction2" disabled class ="traductionBox">
-        </div>
-      </section>
-      <section id = "dataSection">
-        <div id="dataFrame" class = "dataFrame"><script>drawMatrix(generateDataToPaint(0,0,10),1000,1000,10)</script></div>
-      </section>
+		<section id = "inputSection" class = "inputSection">
+			<div class = "sectionTitle">Input
+			  <div class = "inputControls">
+			    <input title ="Add translation line" type="image" src="./images/plus.png" class = "translateButton" onclick="addLine()">
+			    <input title ="Remove translation line" type="image" src="./images/minus.png" class = "translateButton" onclick="removeLine()">
+			  </div>
+			</div>
+			<div class = "phrase">
+			  <input type="checkbox" id="cb1_1" checked onclick="updateChecks('cb1_1')">
+			  <input type="checkbox" id="cb1_2" onclick="updateChecks('cb1_2')">
+			  <input type="text" id="phrase1" class ="inputBox">
+			  <input title ="Translate" type="image" src="./images/translate.png" class = "translateButton" 
+			  	onclick="translateText('phrase1', 'traduction1')" />
+			  <input type="text" id="traduction1" disabled class ="traductionBox" >
+			</div>
+			<div class = "phrase">
+			  <input type="checkbox" id="cb2_1" onclick="updateChecks('cb2_1')">
+			  <input type="checkbox" id="cb2_2" checked onclick="updateChecks('cb2_2')">
+			  <input type="text" id="phrase2" class ="inputBox">
+			  <input title ="Translate" type="image" src="./images/translate.png" class = "translateButton" 
+			  	onclick="translateText('phrase2', 'traduction2')" />
+			  <input type="text" id="traduction2" disabled class ="traductionBox">
+			</div>        
+		</section>		
+		<section id = "dataSection" class = "dataSection">
+			<div class = "drawControls">        	
+				<div class = "sectionTitle">Visualization controls</div>				
+
+				<input title ="Redraw matrix" type = "image" src = "./images/draw.png" class = "drawButton"  onclick="draw()" /> 
+			</div>
+			<div id="dataFrame" class = "dataFrame"></div>
+		</section>
     </body>
   </html>

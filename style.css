@@ -22,6 +22,9 @@
 	border-style: ridge;
 }
 
+.dataSection {
+	border-style: ridge;
+}
 .sectionTitle {
 	padding: 10px;
 	font-family: Arial, Helvetica, sans-serif;
@@ -33,10 +36,29 @@
 	float:right;
 }
 
+.drawControls{
+	padding: 10px;
+	border-style: none none solid none ;
+}
 
+.drawButton{
+	padding-left: 20px;
+	width: 30px;
+	height: 30px;
+}
+.drawOption{
+	padding: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
+
+.dataFrame{
+	margin: 0 auto;
+}
 svg {
 
-  margin: 0 auto; /* poor attempt at centering */
+  margin: 0 auto; 
   display: block;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
