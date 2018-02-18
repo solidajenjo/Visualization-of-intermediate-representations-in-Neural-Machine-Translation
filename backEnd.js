@@ -6,11 +6,15 @@ var lastSelected_2 = "cb2_2"
 
 function getPhrase1(){	
 	var phrase = "phrase" + lastSelected_1.charAt(2);	
+	var translationId = "traduction" + lastSelected_1.charAt(2);
+	translateText(phrase, translationId);	
 	return document.getElementById(phrase).value;
 }
 
 function getPhrase2(){	
 	var phrase = "phrase" + lastSelected_2.charAt(2);	
+	var translationId = "traduction" + lastSelected_2.charAt(2);
+	translateText(phrase, translationId);
 	return document.getElementById(phrase).value;
 }
 
@@ -52,9 +56,10 @@ function generateDataToPaint(cellSize){
 	}
 	weights = tempWeights
 	//temporary - END
-	for (var i = 0; i < side; ++i){
-		for (var j = 0; j < side; ++j){"rgb(246, 239, 100)"
-			var nextCell = [i * cellSize, j * cellSize, "rgb("+ weights[(i * side) + j] + ",0,0)"];
+	for (var j = 0; j < side; ++j){
+		for (var i = 0; i < side; ++i){
+			var arrayPos = (i * side) + j;
+			var nextCell = [i * cellSize, j * cellSize, "rgb("+ weights[arrayPos] + ",0,0)", "Array position ", String((j * side) + i), "Difference " + weights[(i * side) + j]];
 			returnData.push(nextCell);
 		}
 	}
